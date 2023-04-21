@@ -1,6 +1,8 @@
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const assert = require('assert');
+const { exportToWord } = require('./index.js');
+
 
 describe('HTML to Word export', function () {
   it('should export HTML to Word', function () {
@@ -22,7 +24,7 @@ describe('HTML to Word export', function () {
     `);
 
     // Get the HTML to Word export function from your source code
-    const exportToWord = dom.window.exportToWord;
+    const exportToWord = dom.window.exportToWord();
 
     // Call the function to export the HTML to Word
     exportToWord();
