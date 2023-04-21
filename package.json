@@ -1,0 +1,25 @@
+{
+  "name": "html2word",
+  "version": "1.0.0",
+  "description": "HTML to Word Document export using Vanilla JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanMM7/html2word.git"
+  },
+  "keywords": [
+    "html2word"
+  ],
+  "author": "Dan Malengela",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanMM7/html2word/issues"
+  },
+  "homepage": "https://github.com/DanMM7/html2word#readme",
+  "devDependencies": {
+    "jsdom": "^21.1.1"
+  }
+}
