@@ -35,3 +35,27 @@ describe('HTML to Word export', function () {
     assert.equal(link.href.substr(0, 5), 'data:');
   });
 });
+
+//other downloaders
+$("body").on("click", "#pdfBTN", function () {            
+  html2canvas($('table')[0], {                
+    onrendered: function (canvas) {                    
+      var data = canvas.toDataURL();                    
+      var docDefinition = {                        
+        content: [{                            
+          image: data,                            
+          width: 500                        
+        }]                    
+      };                    
+      pdfMake.createPdf(docDefinition).download("Report.pdf");                
+    }            
+  });        
+});
+
+
+$(function () { 
+  $('#excelBTN').click(function(e){            
+    var table2excel = new Table2Excel();            
+    table2excel.export($('table'));        
+  });    
+});
